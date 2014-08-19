@@ -34,7 +34,7 @@ object ApplicationBuild extends Build with UniversalKeys {
       name := "play-project",
       version := Versions.app,
       scalaVersion := Versions.scala,
-      scalajsOutputDir := (crossTarget in Compile).value / "classes" / "public" / "javascripts",
+      scalajsOutputDir := (crossTarget in Compile).value / "classes" / "public" / "js",
       compile in Compile <<= (compile in Compile) dependsOn (fastOptJS in (scalajs, Compile)),
       dist <<= dist dependsOn (fullOptJS in (scalajs, Compile)),
       libraryDependencies ++= Dependencies.scalajvm,
