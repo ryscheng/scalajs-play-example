@@ -16,7 +16,7 @@ dist
 .settings
 
 ### Bower
-jvm/public/bower_components
+play/public/bower_components
 
 ### Temp files
 .~*
