@@ -16,12 +16,12 @@ object ApplicationBuild extends Build with UniversalKeys {
 
   lazy val scalajvm = Project(
     id = "scalajvm",
-    base = file("jvm")
+    base = file("play")
   ) enablePlugins (play.PlayScala) settings (scalajvmSettings: _*) aggregate (scalajs)
 
   lazy val scalajs = Project(
     id   = "scalajs",
-    base = file("js")
+    base = file("scalajs")
   ) settings (scalajsSettings: _*)
 
   lazy val sharedScala = Project(
